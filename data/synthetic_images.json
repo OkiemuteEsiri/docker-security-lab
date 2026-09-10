@@ -1,0 +1,50 @@
+[
+  {
+    "image": "registry.example.test/payments-api",
+    "tag": "2026.09.1",
+    "digest_pinned": false,
+    "runs_as_root": true,
+    "privileged": false,
+    "read_only_rootfs": false,
+    "allow_privilege_escalation": true,
+    "capabilities_added": ["NET_ADMIN"],
+    "healthcheck": true,
+    "signed": false,
+    "sbom_present": false,
+    "critical_vulns": 1,
+    "high_vulns": 6,
+    "owner": "Platform Engineering"
+  },
+  {
+    "image": "registry.example.test/customer-web",
+    "tag": "2026.09.4",
+    "digest_pinned": true,
+    "runs_as_root": false,
+    "privileged": false,
+    "read_only_rootfs": true,
+    "allow_privilege_escalation": false,
+    "capabilities_added": [],
+    "healthcheck": true,
+    "signed": true,
+    "sbom_present": true,
+    "critical_vulns": 0,
+    "high_vulns": 1,
+    "owner": "Digital Engineering"
+  },
+  {
+    "image": "registry.example.test/batch-worker",
+    "tag": "latest",
+    "digest_pinned": false,
+    "runs_as_root": false,
+    "privileged": true,
+    "read_only_rootfs": false,
+    "allow_privilege_escalation": true,
+    "capabilities_added": ["SYS_ADMIN", "SYS_PTRACE"],
+    "healthcheck": false,
+    "signed": false,
+    "sbom_present": true,
+    "critical_vulns": 0,
+    "high_vulns": 8,
+    "owner": ""
+  }
+]
